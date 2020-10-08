@@ -5,10 +5,10 @@ var svgHeight = window.innerHeight;
 
 // Define the chart's margins as an object
 var chartMargin = {
-  top: 30,
-  right: 30,
-  bottom: 30,
-  left: 30
+  top: 20,
+  right: 40,
+  bottom: 60,
+  left: 50
 };
 
 // Define dimensions of the chart area
@@ -85,6 +85,19 @@ d3.csv("assets/data/data.csv").then(function(trendsData) {
   	.text(d=>d.abbr)
   	.attr("x", d => xLinearScale(d.poverty))
     .attr("y", d => yLinearScale(d.obesity)+6)
+
+    //axis labels
+  chartGroup.append("text")
+    .attr("transform", `translate(${chartWidth / 2}, ${chartHeight + chartMargin.top + 20})`)
+    .classed("aText", true)
+    .text("In Poverty (%)");
+
+  chartGroup.append("text")
+    .attr("y", 0 - (chartMargin.left/2))
+    .attr("x",0 - (chartHeight / 2))
+    .attr("transform", "rotate(-90)")
+    .classed("aText", true)
+    .text("Obesity (%)");
 
 }).catch(function(error) {
   console.log(error);
