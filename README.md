@@ -6,4 +6,4 @@ Here is what the scatter plot looks like:
 ![Scatter Plot](D3_data_journalism/scatter_plot.png)
 
 ## Future Directions
-I would like to add a hover feature where when you hover over each item it shows you the actual value and I would like to try to make it interactive with multiple clickable axis. Then I could look at many different correlations.
+I would like to add a hover feature where when you hover over each item it shows you the actual value and I would like to try to make it interactive with multiple clickable axis. Then I could look at many different correlations by simply clicking on different axis options. 
